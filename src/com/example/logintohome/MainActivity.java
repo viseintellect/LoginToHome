@@ -33,13 +33,13 @@ public class MainActivity extends ActionBarActivity {
             	mUsername = (EditText)findViewById(R.id.editText1);
         	    mPassword = (EditText)findViewById(R.id.editText2);
         	    
-        	    if (!Pattern.matches("^[a-zA-Z0-9]{1,6}$", mUsername.getText().toString())) {
-                    mUsername.setError("Oops! Username must have only 6 alphanumeric characters");
+        	    if (!Pattern.matches("^[a-zA-Z0-9]{6,}$", mUsername.getText().toString())) {
+                    mUsername.setError("Oops! Username must have min 6 length and alphanumeric characters only");
                     return;
                 }
         	    
-        	    if (!Pattern.matches("^[a-zA-Z0-9]{1,6}$", mPassword.getText().toString())) {
-                    mPassword.setError("Oops! Password must have only 6 alphanumeric characters");
+        	    if (!Pattern.matches("^[a-zA-Z0-9]{6,}$", mPassword.getText().toString())) {
+                    mPassword.setError("Oops! Password must have min 6 length and alphanumeric characters only");
                     return;
                 }
         	    
